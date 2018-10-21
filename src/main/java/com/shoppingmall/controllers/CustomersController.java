@@ -20,21 +20,29 @@ import java.util.List;
 @RequestMapping("/api")
 public class CustomersController {
 
-	@Autowired
-	private CustomerService customerService;
+  @Autowired
+  private CustomerService customerService;
 
-	@GetMapping("/customers")
-	public ResponseEntity<List<Customer>> getCustomers() {
-		List<Customer> customers = customerService.getCustomers();
-		return new ResponseEntity<>(customers, HttpStatus.OK);
-	}
+  /**
+   * @return list of customers
+   */
+  @GetMapping("/customers")
+  public ResponseEntity<List<Customer>> getCustomers() {
+    List<Customer> customers = customerService.getCustomers();
+    return new ResponseEntity<>(customers, HttpStatus.OK);
+  }
 
-	@GetMapping("/customers/{id}")
-	public ResponseEntity<Customer> getCustomers(@PathVariable int id) {
-		Customer customer = customerService.getCustomer(id);
-		if(customer == null) {
-			throw new CustomerNotFoundException("customer with id - " + id + " not found");
-		}
-		return new ResponseEntity<>(customer, HttpStatus.OK);
-	}
+
+  /**
+   * @param id
+   * @return get customer by id and the orders.
+   */
+  @GetMapping("/customers/{id}")
+  public ResponseEntity<Customer> getCustomers(@PathVariable int id) {
+    Customer customer = customerService.getCustomer(id);
+    if (customer == null) {
+      throw new CustomerNotFoundException("customer with id - " + id + " not found");
+    }
+    return new ResponseEntity<>(customer, HttpStatus.OK);
+  }
 }

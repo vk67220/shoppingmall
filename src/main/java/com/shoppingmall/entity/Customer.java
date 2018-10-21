@@ -1,6 +1,7 @@
 package com.shoppingmall.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * @author muralinutalapati
@@ -11,10 +12,10 @@ public class Customer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "customer_number")
+	@Column(name = "customerNumber")
 	private int id;
 
-	@Column(name = "customer_name")
+	@Column(name = "customerName")
 	private String name;
 
 	@Column(name = "contactFirstName")
@@ -31,7 +32,19 @@ public class Customer {
 	private String postalCode;
 	private String country;
 
-	public String getPhone() {
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+  @JoinColumn(name = "customerNumber")
+	private List<Order> orders;
+
+  public List<Order> getOrders() {
+    return orders;
+  }
+
+  public void setOrders(List<Order> orders) {
+    this.orders = orders;
+  }
+
+  public String getPhone() {
 		return phone;
 	}
 
