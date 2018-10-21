@@ -1,4 +1,10 @@
 package com.shoppingmall.services;
 
-public class CustomerService {
+import com.shoppingmall.entity.Customer;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+public interface CustomerService {
+	List<Customer> getCustomers();
 }

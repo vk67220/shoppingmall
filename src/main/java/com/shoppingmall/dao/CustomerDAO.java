@@ -1,4 +1,9 @@
 package com.shoppingmall.dao;
 
-public class CustomerDAO {
+import com.shoppingmall.entity.Customer;
+
+import java.util.List;
+
+public interface CustomerDAO {
+	List<Customer> getCustomers();
 }
