@@ -22,4 +22,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 		Query theQuery = entityManager.createQuery("from Customer");
 		return (List<Customer>)theQuery.getResultList();
 	}
+
+	@Override
+	public Customer getCustomer(int id) {
+		return entityManager.find(Customer.class, id);
+	}
 }
