@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4852e63a-8107-4229-8044-0f621e9d2d8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoppingmall.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/CustomerWithNumberOfOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/CustomerWithNumberOfOrders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/OrderDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/ProductOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/controllers/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/controllers/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/OrderDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/OrderDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,79 +44,171 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="8" />
+          <entry key="java" value="35" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="35" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="796" />
+          <entry key="java" value="2376" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="796" />
+          <entry key="JAVA" value="2374" />
+          <entry key="JPA QL" value="2" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAOImpl.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/OrderDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+            <state relative-caret-position="263">
+              <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
               <folding>
-                <element signature="e#972#1033#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#524#554#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/controllers/OrdersController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/controllers/CustomersController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/ProductOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-361">
-              <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+            <state relative-caret-position="6">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#876#877#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
+                <element signature="e#992#993#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1068#1069#0" expanded="true" />
+                <element signature="e#1096#1097#0" expanded="true" />
+                <element signature="e#1148#1149#0" expanded="true" />
+                <element signature="e#1188#1189#0" expanded="true" />
+                <element signature="e#1225#1226#0" expanded="true" />
+                <element signature="e#1250#1251#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1334#1335#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/CustomerWithNumberOfOrders.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="59" column="52" lean-forward="true" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+            <state relative-caret-position="-456">
+              <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding>
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#588#589#0" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
-                <element signature="e#777#778#0" expanded="true" />
-                <element signature="e#803#804#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/OrderDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="25" />
+              <folding>
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#770#771#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
                 <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#965#966#0" expanded="true" />
-                <element signature="e#992#993#0" expanded="true" />
-                <element signature="e#1014#1015#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
-                <element signature="e#1079#1080#0" expanded="true" />
+                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="e#1043#1044#0" expanded="true" />
+                <element signature="e#1080#1081#0" expanded="true" />
+                <element signature="e#1112#1113#0" expanded="true" />
+                <element signature="e#1169#1170#0" expanded="true" />
+                <element signature="e#1217#1218#0" expanded="true" />
+                <element signature="e#1255#1256#0" expanded="true" />
+                <element signature="e#1281#1282#0" expanded="true" />
+                <element signature="e#1333#1334#0" expanded="true" />
+                <element signature="e#1369#1370#0" expanded="true" />
+                <element signature="e#1408#1409#0" expanded="true" />
+                <element signature="e#1440#1441#0" expanded="true" />
+                <element signature="e#1499#1500#0" expanded="true" />
+                <element signature="e#1547#1548#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#837#838#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#946#947#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -124,11 +224,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/CustomerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/CustomerWithNumberOfOrders.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/ProductOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/OrderDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/OrderService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/services/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/OrderDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/OrderDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shoppingmall/controllers/OrdersController.java" />
       </list>
     </option>
   </component>
@@ -182,6 +292,32 @@
               <item name="shoppingmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="shoppingmall" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="shoppingmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingmall" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shoppingmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingmall" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shoppingmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingmall" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shoppingmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shoppingmall" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -196,7 +332,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540199193809" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540216812527" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -265,12 +401,12 @@
       <workItem from="1540189576828" duration="412000" />
       <workItem from="1540190998033" duration="1214000" />
       <workItem from="1540192332883" duration="486000" />
-      <workItem from="1540192894348" duration="6247000" />
+      <workItem from="1540192894348" duration="20072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8359000" />
+    <option name="totallyTimeSpent" value="22184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -290,8 +426,8 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6098418" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.65905094" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.84885764" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.7205624" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -336,44 +472,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAOImpl.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/services/CustomerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="36" column="40" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/services/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="10" column="33" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -390,6 +493,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/services/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="164" column="32" lean-forward="true" selection-start-line="164" selection-start-column="32" selection-end-line="164" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/controllers/CustomersController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-361">
@@ -399,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/CustomerWithNumberOfOrders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="59" column="52" lean-forward="true" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+        <state relative-caret-position="192">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#557#558#0" expanded="true" />
             <element signature="e#588#589#0" expanded="true" />
@@ -422,12 +546,158 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/OrderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/services/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/services/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/CustomerDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+        <state relative-caret-position="96">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/dao/OrderDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
           <folding>
-            <element signature="e#972#1033#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#524#554#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/OrderDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="25" />
+          <folding>
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1369#1370#0" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1440#1441#0" expanded="true" />
+            <element signature="e#1499#1500#0" expanded="true" />
+            <element signature="e#1547#1548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/entity/ProductOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shoppingmall/controllers/OrdersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,11 @@
 package com.shoppingmall.services;
 
-public class OrderService {
+import com.shoppingmall.entity.ProductOrder;
+import java.util.List;
+
+/**
+ * @author muraliprasanth.n
+ */
+public interface OrderService {
+  List<ProductOrder> getProducOrders();
 }

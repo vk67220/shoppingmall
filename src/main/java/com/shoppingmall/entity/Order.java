@@ -2,6 +2,7 @@ package com.shoppingmall.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author muralinutalapati
@@ -9,6 +10,7 @@ import java.util.Date;
 @Entity
 @Table(name = "orders")
 public class Order {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "orderNumber")
@@ -19,6 +21,10 @@ public class Order {
   private String status;
   private String comments;
 
+  @OneToMany
+  @JoinColumn(name = "orderNumber")
+  private List<OrderDetails> orderDetails;
+
   public Order(Date orderDate, Date requiredDate, Date shippedDate, String status, String comments) {
     this.orderDate = orderDate;
     this.requiredDate = requiredDate;
@@ -28,6 +34,14 @@ public class Order {
   }
 
   public Order() {
+  }
+
+  public List<OrderDetails> getOrderDetails() {
+    return orderDetails;
+  }
+
+  public void setOrderDetails(List<OrderDetails> orderDetails) {
+    this.orderDetails = orderDetails;
   }
 
   public int getOrderNumber() {

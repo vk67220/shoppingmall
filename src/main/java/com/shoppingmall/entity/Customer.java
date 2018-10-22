@@ -162,6 +162,7 @@ public class Customer {
 					", state='" + state + '\'' +
 					", postalCode='" + postalCode + '\'' +
 					", country='" + country + '\'' +
+					", orders=" + orders +
 					'}';
 	}
 }

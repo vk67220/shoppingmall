@@ -1,4 +1,9 @@
 package com.shoppingmall.dao;
 
-public class OrderDAO {
+import com.shoppingmall.entity.ProductOrder;
+
+import java.util.List;
+
+public interface OrderDAO {
+  List<ProductOrder> getProducOrders();
 }

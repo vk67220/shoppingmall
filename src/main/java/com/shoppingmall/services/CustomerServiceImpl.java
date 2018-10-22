@@ -3,6 +3,8 @@ package com.shoppingmall.services;
 import com.shoppingmall.dao.CustomerDAO;
 import com.shoppingmall.entity.Customer;
 import com.shoppingmall.entity.CustomerWithNumberOfOrders;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +18,7 @@ import java.util.List;
 @Transactional(rollbackFor = Exception.class)
 public class CustomerServiceImpl implements CustomerService {
 
+	private Logger log = LoggerFactory.getLogger(getClass().getName());
 	private CustomerDAO customerDAO;
 
 	@Autowired
@@ -30,7 +33,9 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer getCustomer(int id) {
-		return customerDAO.getCustomer(id);
+		Customer customer = customerDAO.getCustomer(id);
+		log.info("--->>> {}" , customer);
+		return customer;
 	}
 
 	@Override

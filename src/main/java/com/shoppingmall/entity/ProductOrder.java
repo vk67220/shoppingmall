@@ -1,27 +1,40 @@
 package com.shoppingmall.entity;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
- * @author muralinutalapati
+ * @author muraliprasanth.n
  */
-@Entity
-@Table(name = "products")
-public class Product {
-
-  @Id
-  @Column(name = "productCode")
+public class ProductOrder {
+  private int orderNumber;
+  private Date orderDate;
   private String productCode;
   private String productName;
   private BigDecimal buyPrice;
 
-  public Product(String productName, BigDecimal buyPrice) {
+  public ProductOrder(int orderNumber, Date orderDate, String productCode, String productName, BigDecimal buyPrice) {
+    this.orderNumber = orderNumber;
+    this.orderDate = orderDate;
+    this.productCode = productCode;
     this.productName = productName;
     this.buyPrice = buyPrice;
   }
 
-  public Product() {
+  public int getOrderNumber() {
+    return orderNumber;
+  }
+
+  public void setOrderNumber(int orderNumber) {
+    this.orderNumber = orderNumber;
+  }
+
+  public Date getOrderDate() {
+    return orderDate;
+  }
+
+  public void setOrderDate(Date orderDate) {
+    this.orderDate = orderDate;
   }
 
   public String getProductCode() {
