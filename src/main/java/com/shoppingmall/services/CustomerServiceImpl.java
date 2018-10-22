@@ -2,6 +2,7 @@ package com.shoppingmall.services;
 
 import com.shoppingmall.dao.CustomerDAO;
 import com.shoppingmall.entity.Customer;
+import com.shoppingmall.entity.CustomerWithNumberOfOrders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,5 +31,10 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Customer getCustomer(int id) {
 		return customerDAO.getCustomer(id);
+	}
+
+	@Override
+	public List<CustomerWithNumberOfOrders> getCustomersWithNumberOfOrders() {
+		return customerDAO.getCustomersWithNumberOfOrders();
 	}
 }

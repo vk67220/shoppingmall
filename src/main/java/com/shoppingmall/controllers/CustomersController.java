@@ -1,6 +1,7 @@
 package com.shoppingmall.controllers;
 
 import com.shoppingmall.entity.Customer;
+import com.shoppingmall.entity.CustomerWithNumberOfOrders;
 import com.shoppingmall.exception.CustomerNotFoundException;
 import com.shoppingmall.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,5 +45,10 @@ public class CustomersController {
       throw new CustomerNotFoundException("customer with id - " + id + " not found");
     }
     return new ResponseEntity<>(customer, HttpStatus.OK);
+  }
+
+  @GetMapping("/customers/maxOrders")
+  public List<CustomerWithNumberOfOrders> getCustomersWithHighestOrders() {
+    return customerService.getCustomersWithNumberOfOrders();
   }
 }
