@@ -1,8 +1,11 @@
 package com.shoppingmall.dao;
 
+import com.shoppingmall.entity.Order;
 import com.shoppingmall.entity.ProductOrder;
+import com.shoppingmall.repositories.OrdersRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -22,6 +25,9 @@ public class OrderDAOImpl implements OrderDAO {
   @PersistenceContext
   private EntityManager entityManager;
 
+  @Autowired
+  private OrdersRepository ordersRepository;
+
   @SuppressWarnings("unchecked")
   @Override
   public List<ProductOrder> getProducOrders() {
@@ -35,4 +41,10 @@ public class OrderDAOImpl implements OrderDAO {
     log.debug("===>><<?? {}", results);
     return orders;
   }
+
+  @Override
+  public List<Order> getAllOrders() {
+    return ordersRepository.findAll();
+  }
+
 }

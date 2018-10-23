@@ -1,6 +1,7 @@
 package com.shoppingmall.services;
 
 import com.shoppingmall.dao.OrderDAO;
+import com.shoppingmall.entity.Order;
 import com.shoppingmall.entity.ProductOrder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,5 +26,10 @@ public class OrderServiceImpl implements  OrderService{
   @Override
   public List<ProductOrder> getProducOrders() {
     return orderDAO.getProducOrders();
+  }
+
+  @Override
+  public List<Order> getAllOrders() {
+    return orderDAO.getAllOrders();
   }
 }

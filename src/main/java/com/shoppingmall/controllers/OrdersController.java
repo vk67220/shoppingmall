@@ -1,5 +1,6 @@
 package com.shoppingmall.controllers;
 
+import com.shoppingmall.entity.Order;
 import com.shoppingmall.entity.ProductOrder;
 import com.shoppingmall.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +22,16 @@ public class OrdersController {
   @Autowired
   private OrderService orderService;
 
-
   /**
    * @return list of orders with products and product details.
    */
   @GetMapping("/ordersWithProductDetails")
   public ResponseEntity<List<ProductOrder>> getOrders() {
     return new ResponseEntity<>(orderService.getProducOrders(), HttpStatus.OK);
+  }
+
+  @GetMapping("/orders")
+  public ResponseEntity<List<Order>> getAllOrders() {
+    return new ResponseEntity<>(orderService.getAllOrders(), HttpStatus.OK);
   }
 }
