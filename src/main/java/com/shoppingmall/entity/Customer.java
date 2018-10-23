@@ -148,6 +148,12 @@ public class Customer {
 		this.country = country;
 	}
 
+	public Customer(String name, String firstName, String lastName) {
+		this.name = name;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
 	@Override
 	public String toString() {
 		return "Customer{" +
