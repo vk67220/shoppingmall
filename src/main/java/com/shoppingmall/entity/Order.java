@@ -21,6 +21,9 @@ public class Order {
   private String status;
   private String comments;
 
+  @ManyToOne(fetch = FetchType.LAZY)
+  private Customer customer;
+
   @OneToMany
   @JoinColumn(name = "orderNumber")
   private List<OrderDetails> orderDetails;

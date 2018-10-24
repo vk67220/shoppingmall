@@ -2,8 +2,10 @@ package com.shoppingmall.dao;
 
 import com.shoppingmall.entity.Customer;
 import com.shoppingmall.entity.CustomerWithNumberOfOrders;
+import com.shoppingmall.repositories.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -24,10 +26,12 @@ public class CustomerDAOImpl implements CustomerDAO {
   @PersistenceContext
   private EntityManager entityManager;
 
+  @Autowired
+  private CustomerRepository customerRepository;
+
   @Override
   public List<Customer> getCustomers() {
-    Query theQuery = entityManager.createQuery("from Customer");
-    return (List<Customer>) theQuery.getResultList();
+    return customerRepository.findAll();
   }
 
   @Override
