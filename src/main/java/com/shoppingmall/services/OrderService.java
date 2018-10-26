@@ -10,4 +10,5 @@ import java.util.List;
 public interface OrderService {
   List<ProductOrder> getProducOrders();
   List<Order> getAllOrders();
+  Order getOrderAndDetails(int orderId);
 }

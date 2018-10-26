@@ -1,6 +1,6 @@
 package com.shoppingmall.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -24,6 +24,7 @@ public class Order extends AuditModel{
   private String status;
   private String comments;
 
+  @JsonBackReference
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "customerNumber", nullable = false)
   private Customer customer;
@@ -97,6 +98,14 @@ public class Order extends AuditModel{
 
   public void setComments(String comments) {
     this.comments = comments;
+  }
+
+  public Customer getCustomer() {
+    return customer;
+  }
+
+  public void setCustomer(Customer customer) {
+    this.customer = customer;
   }
 
   @Override

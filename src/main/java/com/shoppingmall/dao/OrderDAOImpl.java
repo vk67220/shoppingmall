@@ -3,6 +3,7 @@ package com.shoppingmall.dao;
 import com.shoppingmall.entity.Order;
 import com.shoppingmall.entity.ProductOrder;
 import com.shoppingmall.repositories.OrdersRepository;
+import org.aspectj.weaver.ast.Or;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,9 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -45,6 +48,14 @@ public class OrderDAOImpl implements OrderDAO {
   @Override
   public List<Order> getAllOrders() {
     return ordersRepository.findAll();
+  }
+
+  @Override
+  public Order getOrderAndDetails(int orderId) {
+    Query query = entityManager.createQuery("from Order o join fetch o.customer where orderNumber=:id");
+    query.setParameter("id", orderId);
+    Order resultList = (Order) query.getSingleResult();
+    return resultList;
   }
 
 }
