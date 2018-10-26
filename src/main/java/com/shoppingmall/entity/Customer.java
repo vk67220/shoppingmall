@@ -1,7 +1,5 @@
 package com.shoppingmall.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -10,7 +8,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "customers")
-public class Customer {
+public class Customer extends AuditModel{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +32,7 @@ public class Customer {
 	private String postalCode;
 	private String country;
 
-	@OneToMany
+	@OneToMany(fetch = FetchType.LAZY)
   @JoinColumn(name = "customerNumber")
 	private List<Order> orders;
 

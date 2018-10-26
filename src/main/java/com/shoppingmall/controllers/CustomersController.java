@@ -45,8 +45,6 @@ public class CustomersController {
     if (customer == null) {
       throw new CustomerNotFoundException("customer with id - " + id + " not found");
     }
-    List<Order> orders = customer.getOrders();
-    customer.setOrders(orders);
     return new ResponseEntity<>(customer, HttpStatus.OK);
   }
 
