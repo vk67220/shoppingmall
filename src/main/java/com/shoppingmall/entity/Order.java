@@ -22,6 +22,7 @@ public class Order {
   private String comments;
 
   @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "customerNumber")
   private Customer customer;
 
   @OneToMany

@@ -2,6 +2,7 @@ package com.shoppingmall.controllers;
 
 import com.shoppingmall.entity.Customer;
 import com.shoppingmall.entity.CustomerWithNumberOfOrders;
+import com.shoppingmall.entity.Order;
 import com.shoppingmall.exception.CustomerNotFoundException;
 import com.shoppingmall.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,8 @@ public class CustomersController {
     if (customer == null) {
       throw new CustomerNotFoundException("customer with id - " + id + " not found");
     }
+    List<Order> orders = customer.getOrders();
+    customer.setOrders(orders);
     return new ResponseEntity<>(customer, HttpStatus.OK);
   }
 

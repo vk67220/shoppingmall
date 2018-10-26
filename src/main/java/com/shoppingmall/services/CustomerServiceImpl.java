@@ -15,7 +15,6 @@ import java.util.List;
  * @author muralinutalapati
  */
 @Service
-@Transactional(rollbackFor = Exception.class)
 public class CustomerServiceImpl implements CustomerService {
 
 	private Logger log = LoggerFactory.getLogger(getClass().getName());
@@ -32,6 +31,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
+	@Transactional(rollbackFor = Exception.class)
 	public Customer getCustomer(int id) {
 		Customer customer = customerDAO.getCustomer(id);
 		log.info("--->>> {}" , customer);
