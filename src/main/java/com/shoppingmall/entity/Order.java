@@ -1,5 +1,8 @@
 package com.shoppingmall.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -22,10 +25,10 @@ public class Order extends AuditModel{
   private String comments;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "customerNumber")
+  @JoinColumn(name = "customerNumber", nullable = false)
   private Customer customer;
 
-  @OneToMany
+  @OneToMany(fetch = FetchType.LAZY)
   @JoinColumn(name = "orderNumber")
   private List<OrderDetails> orderDetails;
 
