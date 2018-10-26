@@ -1,7 +1,5 @@
 package com.shoppingmall.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -34,8 +32,8 @@ public class Customer {
 	private String postalCode;
 	private String country;
 
-	@OneToMany
-  @JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY)
+	@JoinColumn(name = "customerNumber")
 	private List<Order> orders;
 
   public List<Order> getOrders() {
