@@ -2,7 +2,7 @@ package com.shoppingmall.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.shoppingmall.entity.Customer;
-import com.shoppingmall.entity.CustomerWithNumberOfOrders;
+import com.shoppingmall.dto.CustomerWithNumberOfOrders;
 import com.shoppingmall.entity.Order;
 import com.shoppingmall.exception.CustomerNotFoundException;
 import com.shoppingmall.services.CustomerService;
@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

@@ -2,7 +2,7 @@ package com.shoppingmall.services;
 
 import com.shoppingmall.dao.CustomerDAO;
 import com.shoppingmall.entity.Customer;
-import com.shoppingmall.entity.CustomerWithNumberOfOrders;
+import com.shoppingmall.dto.CustomerWithNumberOfOrders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

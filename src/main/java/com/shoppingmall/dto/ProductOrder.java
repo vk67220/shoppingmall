@@ -1,4 +1,4 @@
-package com.shoppingmall.entity;
+package com.shoppingmall.dto;
 
 import java.math.BigDecimal;
 import java.util.Date;

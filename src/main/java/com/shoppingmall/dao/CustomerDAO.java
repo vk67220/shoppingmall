@@ -1,7 +1,7 @@
 package com.shoppingmall.dao;
 
 import com.shoppingmall.entity.Customer;
-import com.shoppingmall.entity.CustomerWithNumberOfOrders;
+import com.shoppingmall.dto.CustomerWithNumberOfOrders;
 
 import java.util.List;
 

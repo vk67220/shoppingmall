@@ -1,8 +1,7 @@
 package com.shoppingmall.controllers;
 
-import com.shoppingmall.entity.Customer;
 import com.shoppingmall.entity.Order;
-import com.shoppingmall.entity.ProductOrder;
+import com.shoppingmall.dto.ProductOrder;
 import com.shoppingmall.services.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,9 +1,8 @@
 package com.shoppingmall.dao;
 
 import com.shoppingmall.entity.Order;
-import com.shoppingmall.entity.ProductOrder;
+import com.shoppingmall.dto.ProductOrder;
 import com.shoppingmall.repositories.OrdersRepository;
-import org.aspectj.weaver.ast.Or;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -37,7 +35,7 @@ public class OrderDAOImpl implements OrderDAO {
     Stream<ProductOrder> results = entityManager
           .createQuery(new StringBuilder()
                 .append("select ")
-                .append("new com.shoppingmall.entity.ProductOrder(o.orderNumber, o.orderDate, od.productCode, p.productName, p.buyPrice)")
+                .append("new com.shoppingmall.dto.ProductOrder(o.orderNumber, o.orderDate, od.productCode, p.productName, p.buyPrice)")
                 .append(" from Order as o inner join o.orderDetails as od inner join od.product as p")
                 .toString()).getResultList().stream().skip(0).limit(20);
     List<ProductOrder> orders = results.collect(Collectors.toList());

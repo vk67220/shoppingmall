@@ -2,7 +2,7 @@ package com.shoppingmall.services;
 
 import com.shoppingmall.dao.OrderDAO;
 import com.shoppingmall.entity.Order;
-import com.shoppingmall.entity.ProductOrder;
+import com.shoppingmall.dto.ProductOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

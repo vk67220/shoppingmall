@@ -1,7 +1,7 @@
 package com.shoppingmall.dao;
 
 import com.shoppingmall.entity.Customer;
-import com.shoppingmall.entity.CustomerWithNumberOfOrders;
+import com.shoppingmall.dto.CustomerWithNumberOfOrders;
 import com.shoppingmall.repositories.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;

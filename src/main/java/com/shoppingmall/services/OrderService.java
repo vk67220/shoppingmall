@@ -1,7 +1,7 @@
 package com.shoppingmall.services;
 
 import com.shoppingmall.entity.Order;
-import com.shoppingmall.entity.ProductOrder;
+import com.shoppingmall.dto.ProductOrder;
 import java.util.List;
 
 /**
