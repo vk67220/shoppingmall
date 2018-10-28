@@ -1,7 +1,9 @@
 package com.shoppingmall.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -29,6 +31,7 @@ public class Order extends AuditModel{
   @JoinColumn(name = "customerNumber", nullable = false)
   private Customer customer;
 
+  @JsonManagedReference
   @OneToMany(fetch = FetchType.LAZY)
   @JoinColumn(name = "orderNumber")
   private List<OrderDetails> orderDetails;

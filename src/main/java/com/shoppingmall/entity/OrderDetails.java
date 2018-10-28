@@ -1,5 +1,7 @@
 package com.shoppingmall.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -16,6 +18,7 @@ public class OrderDetails {
   private BigDecimal priceEach;
   private short orderLineNumber;
 
+  @JsonBackReference
   @ManyToOne
   @JoinColumn(name = "productCode", insertable=false, updatable=false, referencedColumnName = "productCode")
   private Product product;
