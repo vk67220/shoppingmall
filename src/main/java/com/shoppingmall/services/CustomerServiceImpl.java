@@ -6,6 +6,8 @@ import com.shoppingmall.dto.CustomerWithNumberOfOrders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,11 +27,6 @@ public class CustomerServiceImpl implements CustomerService {
 		this.customerDAO = customerDAO;
 	}
 
-	@Override
-  @Transactional(rollbackFor = Exception.class)
-	public List<Customer> getCustomers() {
-		return customerDAO.getCustomers();
-	}
 
 	@Override
 	@Transactional(rollbackFor = Exception.class)
@@ -43,4 +40,11 @@ public class CustomerServiceImpl implements CustomerService {
 	public List<CustomerWithNumberOfOrders> getCustomersWithNumberOfOrders() {
 		return customerDAO.getCustomersWithNumberOfOrders();
 	}
+
+	@Override
+	@Transactional
+	public Page<Customer> getCustomers(Pageable pageable) {
+		return customerDAO.getCustomers(pageable);
+	}
+
 }

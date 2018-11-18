@@ -6,6 +6,8 @@ import com.shoppingmall.repositories.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -29,8 +31,8 @@ public class CustomerDAOImpl implements CustomerDAO {
   private CustomerRepository customerRepository;
 
   @Override
-  public List<Customer> getCustomers() {
-    return customerRepository.findAll();
+  public Page<Customer> getCustomers(Pageable pageable) {
+    return customerRepository.findAll(pageable);
   }
 
   @Override
