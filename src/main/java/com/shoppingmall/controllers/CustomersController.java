@@ -47,7 +47,7 @@ public class CustomersController {
    * @param id
    * @return get customer by id and the orders.
    */
-  @GetMapping(path = "/customers/{id}", produces = "application/json")
+  @GetMapping(path = "/customers/{id}")
   public ResponseEntity<Map<String, Object>> getCustomers(@PathVariable int id) {
     ObjectMapper objectMapper = new ObjectMapper();
     Customer customer = customerService.getCustomer(id);

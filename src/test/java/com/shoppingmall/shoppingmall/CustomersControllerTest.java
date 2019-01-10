@@ -36,7 +36,6 @@ public class CustomersControllerTest {
 		when(customerService.getCustomer(141)).thenReturn(customer);
 		ResponseEntity<String> customerResponseEntity =
 					testRestTemplate.getForEntity("/api/customers/141", String.class);
-		customerResponseEntity.getBody();
 		Assert.assertEquals(200, customerResponseEntity.getStatusCodeValue());
 		Assert.assertEquals(true, customerResponseEntity.getBody().contains("bobby"));
 	}
