@@ -1,13 +1,11 @@
 package com.shoppingmall.shoppingmall;
 
-import com.shoppingmall.controllers.CustomersController;
 import com.shoppingmall.dto.CustomerWithNumberOfOrders;
 import com.shoppingmall.entity.Customer;
 import com.shoppingmall.services.CustomerService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -21,7 +19,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class CustomersControllerTest {
+public class CustomersUnitTest {
 
 	@Autowired
 	private TestRestTemplate testRestTemplate;
