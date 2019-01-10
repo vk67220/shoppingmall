@@ -41,9 +41,7 @@ public class CustomersIntegrationTest {
 
   @Test
   public void testCustomerEndpoint() {
-    ResponseEntity<Customer> customerResponseEntity =
-          testRestTemplate.getForEntity("/api/customers/141", Customer.class);
-    Assertions.assertThat(customerResponseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+
   }
 
 
