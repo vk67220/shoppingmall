@@ -27,7 +27,6 @@ public class CustomerServiceImpl implements CustomerService {
 		this.customerDAO = customerDAO;
 	}
 
-
 	@Override
 	@Transactional(rollbackFor = Exception.class)
 	public Customer getCustomer(int id) {
