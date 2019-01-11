@@ -3,6 +3,7 @@ package com.shoppingmall.dao;
 import com.shoppingmall.entity.Order;
 import com.shoppingmall.dto.ProductOrder;
 import com.shoppingmall.repositories.OrdersRepository;
+import org.hibernate.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
