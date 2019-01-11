@@ -11,6 +11,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @RunWith(SpringRunner.class)
@@ -35,5 +36,24 @@ public class CustomersRepositoryTest {
 		Optional<Customer> customerWrapper = customerRepository.findById(1);
 		Customer customer = customerWrapper.get();
 		Assert.assertEquals("both must be equal", customer.getFirstName(), "bobby");
+	}
+
+	@Test
+	public void testAllCustomers() {
+		Customer mockCustomer = new Customer();
+		mockCustomer.setFirstName("bobby");
+		mockCustomer.setCreatedAt(new Date());
+		mockCustomer.setUpdatedAt(new Date());
+
+		Customer mockCustomer1 = new Customer();
+		mockCustomer1.setFirstName("bobby");
+		mockCustomer1.setCreatedAt(new Date());
+		mockCustomer1.setUpdatedAt(new Date());
+
+		entityManager.persist(mockCustomer);
+		entityManager.persist(mockCustomer1);
+
+		List<Customer> allCustomers = customerRepository.findAll();
+		Assert.assertEquals("size should be equal", 2, allCustomers.size());
 	}
 }
