@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @Configuration
 @EnableJpaAuditing
 @EnableScheduling
+@EnableCaching
 @EnableConfigurationProperties(FileStorageProperties.class)
 public class JpaEnversConfiguration {
 }
