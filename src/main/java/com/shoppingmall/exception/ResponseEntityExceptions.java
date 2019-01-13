@@ -20,7 +20,7 @@ public class ResponseEntityExceptions extends ResponseEntityExceptionHandler {
 
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
-		ErrorResponseBean errorResponseBean = new ErrorResponseBean(HttpStatus.BAD_REQUEST.value(), new Date(), ex.getMessage(), request.getDescription(false);
+		ErrorResponseBean errorResponseBean = new ErrorResponseBean(HttpStatus.BAD_REQUEST.value(), new Date(), ex.getMessage(), request.getDescription(false));
 		return new ResponseEntity<>(errorResponseBean, HttpStatus.BAD_REQUEST);
 	}
 }
