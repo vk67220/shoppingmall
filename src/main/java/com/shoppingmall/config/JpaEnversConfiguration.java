@@ -1,4 +1,4 @@
-package com.shoppingmall;
+package com.shoppingmall.config;
 
 import com.shoppingmall.config.FileStorageProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
