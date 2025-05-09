@@ -79,7 +79,14 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.6.9</version> <!-- Compatible with Spring Boot 2.5.x -->
+            <version>1.6.14</version> <!-- Updated to the latest compatible version -->
+        </dependency>
+
+        <!-- Core Dependency for OpenAPI -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-core</artifactId>
+            <version>1.6.14</version> <!-- Ensure the correct version is used -->
         </dependency>
 
         <!-- Jackson for Hibernate Integration -->
