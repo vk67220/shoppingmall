@@ -104,6 +104,20 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- JUnit 5 Dependencies -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.7.2</version> <!-- Specify the version -->
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.7.2</version> <!-- Specify the version -->
+      <scope>test</scope>
+    </dependency>
+
     <!-- Spring Boot DevTools (optional for development purposes) -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
