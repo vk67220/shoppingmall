@@ -1,17 +1,13 @@
 FROM openjdk:8-jdk-alpine
 
-# Copy the application jar file to the container
-COPY target/shoppingmall.jar /usr/app/
-
 # Set the working directory inside the container
 WORKDIR /usr/app/
 
+# Copy the application jar file to the container
+COPY target/shoppingmall.jar .
+
 # Set the entry point to run the application with the required JVM argument
-ENTRYPOINT ["java", "--add-opens", "java.base/java.lang=ALL-UNNAMED", "-jar", "shoppingmall.jar"]
+ENTRYPOINT ["java", "-jar", "shoppingmall.jar"]
 
-# Expose port 8080
+# Expose port 8080 for the application
 EXPOSE 8080
-
-
-
-
