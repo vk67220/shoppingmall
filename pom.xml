@@ -86,7 +86,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-core</artifactId>
-            <version>1.6.13</version> <!-- Ensure the correct version is used -->
+            <version>1.6.0</version> <!-- Ensure the correct version is used -->
         </dependency>
 
         <!-- Jackson for Hibernate Integration -->
