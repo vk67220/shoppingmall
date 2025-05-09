@@ -14,7 +14,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.0</version> <!-- Spring Boot version compatible with Java 8 -->
+        <version>2.5.0</version> <!-- Ensure compatibility with Java 8 -->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -61,11 +61,11 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Hibernate Core (Explicitly set to match Spring Boot 2.5) -->
+        <!-- Hibernate Core -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.32.Final</version> <!-- Updated to a stable version -->
+            <version>5.4.32.Final</version>
         </dependency>
 
         <!-- H2 for in-memory DB testing -->
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.6.9</version> <!-- Ensure compatibility with your Spring Boot version -->
+            <version>1.6.9</version> <!-- Compatible with Spring Boot 2.5.x -->
         </dependency>
 
         <!-- Jackson for Hibernate Integration -->
