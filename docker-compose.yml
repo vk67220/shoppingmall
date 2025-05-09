@@ -27,7 +27,7 @@ services:
     ports:
       - "8787:8787"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/classicmodels
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/classicmodels
       SPRING_DATASOURCE_USERNAME: admin
       SPRING_DATASOURCE_PASSWORD: ashokit123
     networks:
