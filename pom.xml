@@ -14,12 +14,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.0</version>
-        <relativePath/>
+        <version>2.5.0</version> <!-- Spring Boot version compatible with Java 8 -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>1.8</java.version> <!-- Ensure Java 8 is used -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -61,11 +61,11 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Hibernate Core -->
+        <!-- Hibernate Core (Explicitly set to match Spring Boot 2.5) -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.32.Final</version>
+            <version>5.4.32.Final</version> <!-- Updated to a stable version -->
         </dependency>
 
         <!-- H2 for in-memory DB testing -->
@@ -75,25 +75,11 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Swagger for API Documentation (Springdoc OpenAPI) -->
+        <!-- Springdoc OpenAPI (Replaces Swagger) -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.5.10</version>
-        </dependency>
-
-        <!-- HAL Browser -->
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-rest-hal-browser</artifactId>
-            <version>3.1.1.RELEASE</version>
-        </dependency>
-
-        <!-- JAXB (For Java 8 compatibility) -->
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
+            <version>1.6.9</version> <!-- Ensure compatibility with your Spring Boot version -->
         </dependency>
 
         <!-- Jackson for Hibernate Integration -->
@@ -111,7 +97,7 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Jackson XML (For XML data handling) -->
+        <!-- Jackson XML (If needed for XML data handling) -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
@@ -154,4 +140,5 @@
             <url>http://74.225.184.133:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+
 </project>
