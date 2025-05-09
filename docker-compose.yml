@@ -27,7 +27,7 @@ services:
     ports:
       - "8787:8787"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/classicmodels?zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=UTF-8&characterSetResults=UTF-8
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/classicmodels
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
     networks:
