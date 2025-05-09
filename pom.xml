@@ -55,8 +55,8 @@
 
         <!-- MySQL JDBC Driver -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
             <version>8.0.33</version>
             <scope>runtime</scope>
         </dependency>
@@ -79,14 +79,14 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.6.10</version> <!-- Updated to latest compatible version -->
+            <version>1.6.10</version> <!-- Updated to the version that works for you -->
         </dependency>
 
         <!-- Core Dependency for OpenAPI -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-core</artifactId>
-            <version>1.6.10</version> <!-- Updated to latest compatible version -->
+            <version>1.6.10</version> <!-- Updated to the version that works for you -->
         </dependency>
 
         <!-- Jackson for Hibernate Integration -->
@@ -152,10 +152,6 @@
         <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-        <repository>
-            <id>spring-repo</id>
-            <url>https://repo.spring.io/release</url>
         </repository>
     </repositories>
 
