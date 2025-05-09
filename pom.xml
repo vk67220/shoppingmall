@@ -15,7 +15,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.6.RELEASE</version>
+        <version>2.5.4</version> <!-- Updated Spring Boot Version -->
         <relativePath/>
     </parent>
 
@@ -26,68 +26,93 @@
     </properties>
 
     <dependencies>
+        <!-- H2 Database (for runtime) -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- Spring Data JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+
+        <!-- Spring Web (REST, Web MVC, etc.) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- JAXB API (Required for JDK 8 and above) -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
+            <version>2.3.1</version> <!-- JAXB Version -->
         </dependency>
+
+        <!-- Spring Boot DevTools (Only in development, optional) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
+        <!-- MySQL JDBC Driver (Runtime scope) -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- Spring Data Rest (for exposing repositories as RESTful endpoints) -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-rest-hal-browser</artifactId>
             <version>3.1.1.RELEASE</version>
         </dependency>
+
+        <!-- SpringDoc OpenAPI for automatic Swagger generation -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.1.0</version>
         </dependency>
+
+        <!-- Spring Boot Actuator (for application metrics, health checks, etc.) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>2.0.6.RELEASE</version>
+            <version>2.5.4</version> <!-- Updated to match Spring Boot version -->
         </dependency>
+
+        <!-- Jackson Datatype for Hibernate 5 (JSON conversion for JPA entities) -->
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-hibernate5</artifactId>
-            <version>2.9.7</version>
+            <version>2.12.3</version> <!-- Updated to a newer version -->
         </dependency>
+
+        <!-- Spring Boot Starter Test (for testing) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- Hibernate Core (JPA ORM) -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
         </dependency>
+
+        <!-- Jackson Dataformat for XML (for handling XML requests and responses) -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
-            <version>2.9.7</version>
+            <version>2.12.3</version> <!-- Updated to a newer version -->
         </dependency>
     </dependencies>
 
