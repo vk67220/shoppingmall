@@ -155,4 +155,15 @@
         </repository>
     </repositories>
 
+  <repositories>
+    <repository>
+        <id>spring-repo</id>
+        <url>https://repo.spring.io/release</url>
+    </repository>
+    <repository>
+        <id>central-repo</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+</repositories>
+
 </project>
