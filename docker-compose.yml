@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: shoppingmall-mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ashokit_ecomm
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - shoppingmall-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shoppingmall-app
+    depends_on:
+      - mysql
+    ports:
+      - "8787:8787"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/ashokit_ecomm?zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=UTF-8&characterSetResults=UTF-8
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    networks:
+      - shoppingmall-network
+
+networks:
+  shoppingmall-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
