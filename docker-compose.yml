@@ -10,8 +10,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: classicmodels
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: ashokit123
     volumes:
       - mysql-data:/var/lib/mysql
     networks:
