@@ -118,7 +118,7 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- JUnit 4 (added) -->
+    <!-- JUnit 4 -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -147,6 +147,7 @@
   </distributionManagement>
 
   <build>
+    <finalName>shoppingmall</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
