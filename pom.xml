@@ -14,7 +14,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.0</version> <!-- Ensure compatibility with Java 8 -->
+        <version>2.7.8</version> <!-- Updated to Spring Boot 2.7.8 for better compatibility with Java 8 -->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -29,7 +29,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.5.0</version>
+                <version>2.7.8</version> <!-- Updated to match Spring Boot version -->
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -79,14 +79,14 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.6.0</version> <!-- Updated to the latest compatible version -->
+            <version>1.6.14</version> <!-- Updated to latest compatible version -->
         </dependency>
 
         <!-- Core Dependency for OpenAPI -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-core</artifactId>
-            <version>1.6.0</version> <!-- Ensure the correct version is used -->
+            <version>1.6.14</version> <!-- Updated to latest compatible version -->
         </dependency>
 
         <!-- Jackson for Hibernate Integration -->
@@ -147,5 +147,12 @@
             <url>http://74.225.184.133:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 
 </project>
