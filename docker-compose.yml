@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: shoppingmall-mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: classicmodels
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: ashokit123
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - shoppingmall-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shoppingmall-app
+    depends_on:
+      - mysql
+    ports:
+      - "8787:8080"  # Expose 8787 on host, 8080 inside container
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/classicmodels
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: ashokit123
+    networks:
+      - shoppingmall-network
+
+networks:
+  shoppingmall-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local
